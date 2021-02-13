@@ -1,0 +1,19 @@
+.page-header {
+  padding: 1%;
+  border-radius: 0 !important;
+  margin-bottom: 30px !important;
+}
+
+.page-header img {
+  width: 100% !important;
+}
+
+@media only screen and (max-width: 599px) {
+  .page-header img {
+    width: 50% !important;
+    margin: auto !important;
+  }
+  .page-header .margin-auto {
+    margin: auto !important;
+  }
+}

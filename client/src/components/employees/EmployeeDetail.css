@@ -1,0 +1,9 @@
+.employee-detail {
+  width: 80%;
+  margin: auto !important;
+}
+
+.employee-detail img {
+  width: 100%;
+  height: auto !important;
+}

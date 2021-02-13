@@ -1,10 +1,17 @@
 import axios from "axios";
 import history from "../history";
-import { LOGIN_USER } from "./types";
+import { FETCH_EMPLOYEES, LOGIN_USER } from "./types";
 
 export const loginUser = (formValues) => async (dispatch) => {
   const { data } = await axios.post("/api/login", formValues);
-  console.log(data);
   dispatch({ type: LOGIN_USER, payload: data });
-  if (data.user) history.push("/dashboard");
+  if (data.user) {
+    sessionStorage.setItem("user", data.user);
+    history.push("/dashboard");
+  }
+};
+
+export const fetchEmployees = () => async (dispatch) => {
+  const { data } = await axios.get("/api/employees");
+  dispatch({ type: FETCH_EMPLOYEES, payload: data.user });
 };

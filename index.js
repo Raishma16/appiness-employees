@@ -13,7 +13,7 @@ app.post("/api/login", (req, res) => {
   if (user) {
     if (user.password === req.body.password) res.send({ user });
     else res.send({ error: "Password is incorrect!" });
-  } else res.send({ error: "User not found!" });
+  } else res.send({ error: "Username is incorrect!" });
 });
 
 app.get("/api/employees", (req, res) => {

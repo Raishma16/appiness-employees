@@ -12,7 +12,7 @@
       "id": 2,
       "name": "test2",
       "age": "12",
-      "gender": "male",
+      "gender": "female",
       "email": "test2@gmail.com",
       "phoneNo": "9415346314"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "name": "test3",
       "age": "13",
-      "gender": "male",
+      "gender": "female",
       "email": "test3@gmail.com",
       "phoneNo": "9415346315"
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "name": "test6",
       "age": "16",
-      "gender": "male",
+      "gender": "female",
       "email": "test6@gmail.com",
       "phoneNo": "9415346318"
     }
