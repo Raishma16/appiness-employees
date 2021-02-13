@@ -12,8 +12,8 @@ app.post("/api/login", (req, res) => {
   const user = login.find((user) => user.username === req.body.username);
   if (user) {
     if (user.password === req.body.password) res.send({ user });
-    else res.send({ error: "Invalid password" });
-  } else res.send({ error: "User not found. Please register to continue." });
+    else res.send({ error: "Password is incorrect!" });
+  } else res.send({ error: "User not found!" });
 });
 
 app.get("/api/employees", (req, res) => {

@@ -1,0 +1,30 @@
+.login {
+  height: 100vh;
+  background-color: #eee;
+}
+.login > .grid {
+  height: 100%;
+}
+.login .image {
+  width: 45% !important;
+  margin-top: -100px;
+  margin-bottom: 10px;
+}
+.login .column {
+  max-width: 450px;
+}
+
+.login .login-header {
+  color: #4cbbe9;
+}
+
+.login .login-button {
+  background-color: #00adca;
+  color: white;
+}
+
+.login .validation-error {
+  margin-bottom: 20px;
+  text-align: left;
+  color: red;
+}
