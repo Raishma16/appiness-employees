@@ -1,12 +1,13 @@
 import React from "react";
-import Modal from "../Modal";
+
 import "./EmployeeDetail.css";
+import Modal from "../Modal";
 
 const EmployeeDetail = ({
   employee: { id, name, age, gender, email, phoneNo },
   setCurrentEmployee
 }) => {
-  const renderContent = () => {
+  const renderBody = () => {
     return (
       <div className="ui placeholder segment employee-detail">
         <div className="ui two column relaxed stackable grid">
@@ -36,11 +37,15 @@ const EmployeeDetail = ({
               {gender}
             </p>
             <p>
-              <strong>Email: </strong>
+              <strong>
+                <i className="envelope icon"></i>
+              </strong>
               {email}
             </p>
             <p>
-              <strong>Phone: </strong>
+              <strong>
+                <i className="horizontally flipped phone icon"></i>
+              </strong>
               {phoneNo}
             </p>
           </div>
@@ -50,10 +55,8 @@ const EmployeeDetail = ({
   };
 
   return (
-    <Modal
-      content={renderContent()}
-      onDismiss={() => setCurrentEmployee(null)}
-    />
+    // EmployeeDetail component displays the employee details within a modal
+    <Modal body={renderBody()} onDismiss={() => setCurrentEmployee(null)} />
   );
 };
 

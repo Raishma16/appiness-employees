@@ -5,23 +5,26 @@ import "./Header.css";
 
 const Header = () => {
   const width = window.screen.width;
+
+  // Helper function to log out the user
   const logout = () => {
     sessionStorage.removeItem("user");
     history.push("/");
   };
+
   return (
     <div
       className={`ui inverted pointing menu page-header ${
         width < 600 ? "stackable" : ""
       }`}
     >
-      <Link to="/" className="item">
+      <div className="item">
         <img
           src="https://www.appinessworld.com/images/appiness-logo.png"
           className="image"
-          alt="logo"
+          alt="header-logo"
         ></img>
-      </Link>
+      </div>
 
       <div className="item">
         <h2 className="margin-auto">

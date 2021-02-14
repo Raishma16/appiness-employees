@@ -1,5 +1,11 @@
+/* CSS styles for Login component */
+
 .login {
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background-color: #eee;
 }
 .login > .grid {

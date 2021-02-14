@@ -1,7 +1,8 @@
+/* CSS styles for Header component */
+
 .page-header {
   padding: 1%;
   border-radius: 0 !important;
-  margin-bottom: 30px !important;
 }
 
 .page-header img {

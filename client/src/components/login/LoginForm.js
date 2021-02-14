@@ -21,6 +21,7 @@ const FIELDS = [
 ];
 
 const LoginForm = ({ loginUser, handleSubmit, login }) => {
+  //Helper function used to render username and password fields in the login form.
   const renderFields = () => {
     return FIELDS.map(({ name, type, placeholder, iconName }) => {
       return (
@@ -36,13 +37,11 @@ const LoginForm = ({ loginUser, handleSubmit, login }) => {
     });
   };
 
-  const renderLoginError = () => {
-    if (login.error) return login.error;
-  };
-
   return (
     <form className="ui large form error" onSubmit={handleSubmit(loginUser)}>
-      <div className="ui error message">{renderLoginError()}</div>
+      {/* Display server side validation errors */}
+      <div className="ui error message">{login.error}</div>
+
       <div className="ui segment">
         {renderFields()}
         <button className="ui fluid large submit button login-button">
@@ -53,6 +52,7 @@ const LoginForm = ({ loginUser, handleSubmit, login }) => {
   );
 };
 
+// Client side validation done with redux-form reducer
 const validate = (values) => {
   const errors = {};
 
@@ -74,6 +74,7 @@ const mapStateToProps = ({ login }) => {
   return { login };
 };
 
+// Wrapping LoginForm with redux-form reducer
 const formWrapped = reduxForm({ form: "loginForm", validate })(LoginForm);
 
 export default connect(mapStateToProps, { loginUser })(formWrapped);
