@@ -11,7 +11,7 @@
 
 ## Overview
 
-This is a simple application with an employees dashboard page and a user authentication page. The live application is available at https://pacific-crag-93194.herokuapp.com/.
+This is a simple application with an employees dashboard page and a user authentication page. The live application is available at https://sheltered-crag-89056.herokuapp.com/.
 
 - The app uses NodeJS with Express as the backend server which provides the input data.
 - The front-end is built using the ReactJS library with Redux for state management.
